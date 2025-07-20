@@ -8,11 +8,355 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_forward" />
-    <title>Influencer Poducts</title>
+    <title>Influencer Products</title>
 
 
     <style>
-        /* banner */
+         @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: "Work Sans", sans-serif;
+ }
+
+
+ /* default CSS */
+ .m-w {
+     max-width: 1110px;
+     margin: auto;
+     padding: 0 20px; /* Add padding for smaller screens */
+ }
+
+ figure {
+     margin: 0;
+ }
+
+ .display-flex {
+     display: flex;
+ }
+
+ /* logo */
+ .logo {
+     font-size: 1.5rem;
+     font-weight: bold;
+     color: #3A3A3A;
+ }
+
+ nav {
+
+     justify-content: space-between;
+     align-items: center; /* Vertically align items */
+     padding: 50px 0;
+     flex-wrap: wrap; /* Allow items to wrap */
+ }
+
+ nav ul {
+    align-items: center;
+ }
+
+ nav ul li {
+     list-style: none;
+     margin-left: 34px;
+     margin-top: 10px; /* Add margin for wrapped items */
+ }
+
+ nav ul li a {
+     text-decoration: none;
+     color: black;
+     font-size: 1rem;
+     font-weight: 600;
+     padding: 10px;
+     border-radius: 10px;
+ }
+
+ nav ul li a:hover {
+     background-color: rgb(197, 197, 238);
+ }
+
+ /* banner */
+ .banner {
+     margin-top: 100px;
+     margin-bottom: 100px;
+     justify-content: space-between;
+     align-items: center;
+
+ }
+
+ .banner-text h1 {
+     font-size: 3.25rem;
+     color: #3A3A3A;
+     margin-bottom: 16px;
+ }
+
+ .banner-text p {
+     font-size: 1rem;
+     font-weight: 600;
+     margin-bottom: 16px;
+ }
+
+ .main-camara {
+     background-image: url(./images/Circle\ design.svg);
+     margin: 20px;
+     background-position: center;
+ }
+ .main-camara img{
+    width: 100%; /* Make image responsive */
+ }
+
+ .banner-text {
+     max-width: 582px;
+     align-items: center;
+ }
+
+ .btn-default {
+     font-size: 1rem;
+     font-weight: bold;
+     color: #fff;
+     width: 196px;
+     height: 44px;
+     /* Auto layout */
+     display: flex;
+     flex-direction: row;
+     justify-content: center; /* Center button content */
+     align-items: center;
+     gap: 8px;
+     padding: 10px 24px;
+     border-radius: 41px;
+     background: rgb(224, 44, 109);
+     border: none; /* Add border none */
+     cursor: pointer; /* Add cursor pointer */
+ }
+
+ /* .......... */
+
+
+ /* logos */
+ .logos {
+     padding: 34px 0; /* Adjust padding */
+     margin-top: 100px;
+     justify-content: center; /* Center logos */
+     align-items: center;
+     flex-wrap: wrap; /* Allow logos to wrap */
+     gap: 30px; /* Add gap between logos */
+
+
+ }
+
+ .logos-section {
+     /* background-color: antiquewhite; */
+     border-radius: 10px;
+     border-top: 1px solid #ddd;
+     border-bottom: 1px solid #ddd;
+
+
+ }
+
+ /* ....... */
+
+ /* Popular Collection */
+ .popular-collection {
+     /* background-color: antiquewhite; */
+     margin-top: 50px;
+     margin-bottom: 50px;
+     padding-bottom: 50px;
+     border-radius: 5px;
+ }
+
+ .popular-collection h4 {
+     font-size: 1.75rem;
+     padding-top: 50px;
+     font-weight: 600;
+     text-align: center;
+     margin-top: 100px;
+
+ }
+
+ .product {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     gap: 30px;
+     margin: 50px 0; /* Adjust margin */
+
+ }
+
+ .product-card {
+     width: 100%;
+     background-color: #fff;
+     border: 1px solid #ddd;
+     border-radius: 8px;
+     overflow: hidden;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+     text-align: left;
+ }
+
+ .product-card img {
+     width: 100%;
+     height: auto;
+     border-radius: 5px;
+     padding: 17px 15px;
+ }
+
+ .product-details {
+     padding: 15px;
+ }
+
+ .product-details h3 {
+     font-size: 28px;
+     margin-bottom: 8px;
+     font-weight: 500;
+     color: #333;
+ }
+
+ .product-details .price {
+     font-size: 24px;
+     color: #000;
+     margin-bottom: 6px;
+     font-weight: 400;
+ }
+
+ .product-details .rating {
+     font-size: 12px;
+     color: rgb(251, 130, 0);
+     margin-bottom: 10px;
+
+ }
+
+ .info {
+     color: #787885;
+     font-weight: bold;
+ }
+
+
+         .featured {
+            margin-top: 100px;
+            margin-bottom: 100px;
+            justify-content: space-between;
+            align-items: center;
+            gap: 50px;
+
+        }
+
+        .featured-text h1 {
+            font-size: 38px;
+            color: #3A3A3A;
+            font-weight: bold;
+            margin-bottom: 16px;
+        }
+
+        .featured-text p {
+            font-size: 1rem;
+            margin-bottom: 16px;
+            color: #787885;
+            font-weight: bold;
+        }
+
+        .featured-img img{
+            width: 100%;
+        }
+
+        .featured-text {
+            max-width: 610px;
+            align-items: center;
+            margin: 0; /* Remove margin */
+            text-align: left; /* Adjust text align */
+        }
+
+
+
+        .footer {
+          background-color: #0f0f1b;
+          color: white;
+          padding: 40px 0;
+          text-align: center;
+        }
+
+        .footer h2 {
+          margin-bottom: 10px;
+          font-size: 24px;
+        }
+
+        .footer p {
+          margin: 0;
+          font-size: 14px;
+          color: #ccc;
+        }
+
+        .social-icons {
+          margin-top: 15px;
+        }
+
+        .social-icons a {
+          color: white;
+          margin: 0 10px;
+          font-size: 18px;
+          transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+          color: #ff0066;
+        }
+
+/******************************************/
+/*           Responsive CSS               */
+/******************************************/
+
+/* For Tablets (up to 1024px) */
+@media (max-width: 1024px) {
+    .product {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+    }
+    nav {
+        justify-content: center; /* Center nav items */
+        gap: 20px;
+    }
+    .banner {
+        flex-direction: column-reverse; /* Stack banner items */
+        text-align: center;
+    }
+    .featured {
+        flex-direction: column-reverse; /* Stack featured items */
+        text-align: center;
+    }
+    .featured-text{
+        text-align: center;
+    }
+    .btn-default{
+        margin: auto;
+    }
+
+}
+
+/* For Mobile Phones (up to 767px) */
+@media (max-width: 767px) {
+    nav, nav ul {
+        flex-direction: column; /* Stack nav items vertically */
+        align-items: center;
+    }
+    nav ul {
+        padding-left: 0;
+    }
+    nav ul li {
+        margin-left: 0;
+    }
+    
+    .banner-text h1 {
+        font-size: 2rem; /* Reduce font size for mobile */
+    }
+
+    .banner, .featured {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .product {
+        grid-template-columns: 1fr; /* 1 column for mobiles */
+    }
+    .featured-text h1{
+        font-size: 1.8rem;
+    }
+}
 
 
     </style>
@@ -22,212 +366,198 @@
 <body>
 
     <!-- navbar -->
-    <nav class="m-w display-flex">
-        <h1 class="logo"> Influencer Poducts</h1>
-        <ul class="display-flex">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Products</a></li>
-            <li><a href="#">sing Up</a></li>
-            <li><a href="#">Log in</a></li>
-            <li> <img src="./images/Group.png" alt="search"></li>
-            <li> <img src="./images/Vector.png" alt="search"></li>
+    <header class="m-w">
+        <nav class="display-flex">
+            <h1 class="logo"> Influencer Poducts</h1>
+            <ul class="display-flex">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Sing Up</a></li>
+                <li><a href="#">Log in</a></li>
+                <li><a href="#"><i class="fas fa-search"></i></a></li>
+                <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- banner section -->
+        <section class="banner m-w display-flex">
+            <div class="banner-text">
+                <h1>Start your Journey as Influencer</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sem vestibulum sed scelerisque eros. Lectus
+                    faucibus.</p>
+                <button class="btn-default">Preebook now <span class="material-symbols-outlined"> arrow_forward </span>
+                </button>
+            </div>
+            <figure class="main-camara"><img src="./images/main-camera.png" alt="Main Camera"></figure>
 
+        </section>
+        <!-- logos section -->
+        <section class=" logos-section m-w">
 
-        </ul>
-    </nav>
-    <!-- banner section -->
-    <section class="banner m-w display-flex">
-        <div class="banner-text">
-            <h1>Start your Journey as Influencer</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sem <br> vestibulum sed scelerisque eros. Lectus
-                faucibus.</p>
-            <button class="btn-default">Preebook now <span class="material-symbols-outlined"> arrow_forward </span>
-            </button>
-        </div>
-        <figure class="main-camara"><img src="./images/main-camera.png" alt=""></figure>
+            <div class="logos display-flex">
+                <figure><img src="./logos/Alibaba.svg" alt="Alibaba"></figure>
+                <figure><img src="./logos/Amazon.svg" alt="Amazon"></figure>
+                <figure><img src="./logos/Daraz.pk Logo.svg" alt="Daraz"></figure>
+                <figure><img src="./logos/Ebay.svg" alt="Ebay"></figure>
+                <figure><img src="./logos/Rakuten.svg" alt="Rakuten"></figure>
+                <figure><img src="./logos/Walmart.svg" alt="Walmart"></figure>
+                <figure><img src="./logos/Target.svg" alt="Target"></figure>
+            </div>
 
-    </section>
-    <!-- logos section -->
-    <section class=" logos-section m-w">
+        </section>
+        <!-- Popular Collection -->
+        <section class="popular-collection m-w">
+            <h4>Popular Collection</h4>
+            <div class="product">
 
-        <div class="logos display-flex">
-            <figure><img src="./logos/Alibaba.svg" alt=""></figure>
-            <figure><img src="./logos/Amazon.svg" alt=""></figure>
-            <figure><img src="./logos/Daraz.pk Logo.svg" alt=""></figure>
-            <figure><img src="./logos/Ebay.svg" alt=""></figure>
-            <figure><img src="./logos/Rakuten.svg" alt=""></figure>
-            <figure><img src="./logos/Walmart.svg" alt=""></figure>
-            <figure><img src="./logos/Target.svg" alt=""></figure>
+                <div class="product-card">
+                    <figure class=" card-img "><img src="./images/action.png" alt="Action Camera"></figure>
 
+                    <div class="product-details">
+                        <h3>Flex Tripod</h3>
+                        <div class="price">$50.48</div>
+                        <div class="rating">⭐⭐⭐⭐⭐ 4.99</div>
+                        <div class="info">
+                            Wordwide shifting <br>available <br>
 
-        </div>
+                            Buyers protection possible!
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <figure class=" card-img "><img src="./images/airpod.png" alt="Airpod"></figure>
+                    <div class="product-details">
+                        <h3>Airbuds</h3>
+                        <div class="price">$100.00</div>
+                        <div class="rating">⭐⭐⭐⭐⭐ 4.99</div>
+                        <div class="info">
+                            Wordwide shifting <br>available <br>
+                            Buyers protection possible!
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <figure class=" card-img "><img src="./images/drone.png" alt="Drone"></figure>
 
-    </section>
-    <!-- Popular Collection -->
-    <section class="popular-collection m-w">
-        <h4>Popular Collection</h4>
-        <div class="product">
+                    <div class="product-details">
+                        <h3>Drone</h3>
+                        <div class="price">$980.25</div>
+                        <div class="rating">⭐⭐⭐⭐⭐ 4.99</div>
+                        <div class="info">
+                            Wordwide shifting <br>available <br>
+                            Buyers protection possible!
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <figure class=" card-img "><img src="./images/setup.png" alt="Photo Setup"></figure>
 
-            <div class="product-card">
-                <figure class=" card-img "><img src="./images/action.png" alt=""></figure>
+                    <div class="product-details">
+                        <h3>Light Setup</h3>
+                        <div class="price">$1200.00</div>
+                        <div class="rating">⭐⭐⭐⭐⭐ 4.99</div>
+                        <div class="info">
+                            Wordwide shifting <br>available <br>
+                            Buyers protection possible!
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <figure class=" card-img "><img src="./images/mic.png" alt="Microphone"></figure>
 
-                <div class="product-details">
-                    <h3>Flex Tripod</h3>
-                    <div class="price">$50.48</div>
-                    <div class="rating">⭐⭐⭐⭐⭐ 4.99</div>
-                    <div class="info">
-                        Wordwide shifting <br>available <br>
+                    <div class="product-details">
+                        <h3>Microphone</h3>
+                        <div class="price">$120.25</div>
+                        <div class="rating">⭐⭐⭐⭐⭐ 4.99</div>
+                        <div class="info">
+                            Wordwide shifting <br>available <br>
+                            Buyers protection possible!
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <figure class=" card-img "><img src="./images/lights.png" alt="Lights"></figure>
 
-                        Buyers protection possible!
+                    <div class="product-details">
+                        <h3>Green Screen</h3>
+                        <div class="price">$25.48</div>
+                        <div class="rating">⭐⭐⭐⭐⭐ 4.99</div>
+                        <div class="info">
+                            Wordwide shifting <br>available <br>
+                            Buyers protection possible!
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <figure class=" card-img "><img src="./images/camera.png" alt="Camera"></figure>
+
+                    <div class="product-details">
+                        <h3>Vlogging Camera</h3>
+                        <div class="price">$1800.80</div>
+                        <div class="rating">⭐⭐⭐⭐⭐ 4.99</div>
+                        <div class="info">
+                            Wordwide shifting <br>available <br>
+                            Buyers protection possible!
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <figure class=" card-img "><img src="./images/tripod.png" alt="Tripod"></figure>
+
+                    <div class="product-details">
+                        <h3>Flex Tripod</h3>
+                        <div class="price">$50.48</div>
+                        <div class="rating">⭐⭐⭐⭐⭐ 4.99</div>
+                        <div class="info">
+                            Wordwide shifting <br>available <br>
+                            Buyers protection possible!
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <figure class=" card-img "><img src="./images/single-light.png" alt="Single Light"></figure>
+                    <div class="product-details">
+                        <h3>Photoshoot set</h3>
+                        <div class="price">$820.40</div>
+                        <div class="rating">⭐⭐⭐⭐⭐ 4.99</div>
+                        <div class="info">
+                            Wordwide shifting <br>available <br>
+                            Buyers protection possible!
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="product-card">
-                <figure class=" card-img "><img src="./images/airpod.png" alt=""></figure>
-                <div class="product-details">
-                    <h3>Flex Tripod</h3>
-                    <div class="price">$50.48</div>
-                    <div class="rating">⭐⭐⭐⭐⭐ 4.99</div>
-                    <div class="info">
-                        Wordwide shifting <br>available <br>
-                        Buyers protection possible!
-                    </div>
-                </div>
+        </section>
+
+        <section class="featured display-flex m-w">
+            <figure class="featured-img">
+                <img src="./images/gear.png" alt="Featured Gear">
+            </figure>
+            <div class="featured-text">
+                <h1>Featured products at one place</h1>
+                <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat
+                    duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+                <button class="btn-default">Join now<span class="material-symbols-outlined"> arrow_forward </span>
+                </button>
             </div>
-            <div class="product-card">
-                <figure class=" card-img "><img src="./images/lights.png" alt=""></figure>
-
-                <div class="product-details">
-                    <h3>Flex Tripod</h3>
-                    <div class="price">$50.48</div>
-                    <div class="rating">⭐⭐⭐⭐⭐ 4.99</div>
-                    <div class="info">
-                        Wordwide shifting <br>available <br>
-                        Buyers protection possible!
-                    </div>
-                </div>
-            </div>
-            <div class="product-card">
-                <figure class=" card-img "><img src="./images/setup.png" alt=""></figure>
-
-                <div class="product-details">
-                    <h3>Flex Tripod</h3>
-                    <div class="price">$50.48</div>
-                    <div class="rating">⭐⭐⭐⭐⭐ 4.99</div>
-                    <div class="info">
-                        Wordwide shifting <br>available <br>
-                        Buyers protection possible!
-                    </div>
-                </div>
-            </div>
-            <div class="product-card">
-                <figure class=" card-img "><img src="./images/mic.png" alt=""></figure>
-
-                <div class="product-details">
-                    <h3>Flex Tripod</h3>
-                    <div class="price">$50.48</div>
-                    <div class="rating">⭐⭐⭐⭐⭐ 4.99</div>
-                    <div class="info">
-                        Wordwide shifting <br>available <br>
-                        Buyers protection possible!
-                    </div>
-                </div>
-            </div>
-            <div class="product-card">
-                <figure class=" card-img "><img src="./images/lights.png" alt=""></figure>
-
-                <div class="product-details">
-                    <h3>Flex Tripod</h3>
-                    <div class="price">$50.48</div>
-                    <div class="rating">⭐⭐⭐⭐⭐ 4.99</div>
-                    <div class="info">
-                        Wordwide shifting <br>available <br>
-                        Buyers protection possible!
-                    </div>
-                </div>
-            </div>
-            <div class="product-card">
-                <figure class=" card-img "><img src="./images/mic.png" alt=""></figure>
-
-                <div class="product-details">
-                    <h3>Flex Tripod</h3>
-                    <div class="price">$50.48</div>
-                    <div class="rating">⭐⭐⭐⭐⭐ 4.99</div>
-                    <div class="info">
-                        Wordwide shifting <br>available <br>
-                        Buyers protection possible!
-                    </div>
-                </div>
-            </div>
-            <div class="product-card">
-                <figure class=" card-img "><img src="./images/tripod.png" alt=""></figure>
-
-                <div class="product-details">
-                    <h3>Flex Tripod</h3>
-                    <div class="price">$50.48</div>
-                    <div class="rating">⭐⭐⭐⭐⭐ 4.99</div>
-                    <div class="info">
-                        Wordwide shifting <br>available <br>
-                        Buyers protection possible!
-                    </div>
-                </div>
-            </div>
-            <div class="product-card">
-                <figure class=" card-img "><img src="./images/single-light.png" alt=""></figure>
-
-                <div class="product-details">
-                    <h3>Flex Tripod</h3>
-                    <div class="price">$50.48</div>
-                    <div class="rating">⭐⭐⭐⭐⭐ 4.99</div>
-                    <div class="info">
-                        Wordwide shifting <br>available <br>
-                        Buyers protection possible!
-                    </div>
-                </div>
-
-
-
-            </div>
-        </div>
-
-
-
-
-
-    </section>
-
-    <section class="featured display-flex m-w">
-        <figure class="featured-img">
-            <img c src="./images/gear.png" alt="">
-        </figure>
-        <div class="featured-text">
-            <h1>Featured products at one place</h1>
-            <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor <br> do amet sint. Velit officia consequat
-                duis enim velit mollit. <br> Exercitation veniam consequat sunt nostrud amet.</p>
-            <button class="btn-default">Join now<span class="material-symbols-outlined"> arrow_forward </span>
-            </button>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- footer -->
 
     <footer class="footer">
-  <div class="footer-content">
-    <h2>influencer products</h2>
-    <p>Copyright &copy; 2025 influencer products <br> All rights reserved</p>
-    <div class="social-icons">
-      <a href="#"><i class="fab fa-facebook-f"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-youtube"></i></a>
-    </div>
-  </div>
-</footer>
-
-
-
-
-
+      <div class="footer-content">
+        <h2>influencer products</h2>
+        <p>Copyright © 2025 influencer products <br> All rights reserved</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </footer>
 
 </body>
 
